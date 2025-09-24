@@ -1,8 +1,8 @@
 const webpack = require('webpack')
 const path = require('path')
 
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const htmlPages = require('./webpack.pages.js')
 
 module.exports = {
   entry: {
@@ -10,7 +10,7 @@ module.exports = {
     page: './src/page.js'
   },
   output: {
-    path: path.resolve(__dirname, 'docs'),
+    path: path.resolve('.', 'docs'),
     filename: '[name].js',
     clean: true
   },
@@ -51,17 +51,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: './index.html',
-      chunks: ['index']
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/pages/page.html',
-      filename: './pages/page.html',
-      chunks: ['page']
-    }),
-    new MiniCssExtractPlugin()
-  ]
+  plugins: [...htmlPages, new MiniCssExtractPlugin()]
 }

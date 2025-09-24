@@ -9,6 +9,6 @@ module.exports = merge(common, {
     static: './dev_build'
   },
   output: {
-    path: path.resolve(__dirname, 'dev_build')
+    path: path.resolve('.', 'dev_build')
   }
 })
