@@ -6,8 +6,8 @@ const htmlPages = require('./webpack.pages.js')
 
 module.exports = {
   entry: {
-    index: './src/index.js',
-    page: './src/page.js'
+    index: './src/javascripts/index.js',
+    page: './src/javascripts/page.js'
   },
   output: {
     path: path.resolve('.', 'docs'),
