@@ -7,7 +7,8 @@ const htmlPages = require('./webpack.pages.js')
 module.exports = {
   entry: {
     index: './src/javascripts/index.js',
-    page: './src/javascripts/page.js'
+    page: './src/javascripts/page.js',
+    sticky: './src/javascripts/sticky-scroll.js'
   },
   output: {
     path: path.resolve('.', 'docs'),
