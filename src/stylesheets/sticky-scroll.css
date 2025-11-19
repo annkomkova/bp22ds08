@@ -1,0 +1,65 @@
+@import 'reset.css';
+@import 'fonts.css';
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: calc(1vw / 14.4);
+}
+body {
+  font-family: 'PT Root UI';
+}
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+h2 {
+  font-size: 36rem;
+}
+p {
+  font-size: 18rem;
+}
+.section {
+  height: 100vh;
+  padding: 20rem;
+}
+.section:nth-of-type(even) {
+  background-color: #eee;
+}
+.section:nth-of-type(odd) {
+  background-color: #e3f5ff;
+}
+header {
+  background-color: #eee;
+  padding: 30rem;
+  display: flex;
+  justify-content: center;
+}
+.stickyBar {
+  position: fixed;
+  top: 10rem;
+  left: 45%;
+  /* background-color: cornflowerblue; */
+  color: white;
+  padding: 15rem 20rem;
+  text-align: center;
+  z-index: 1;
+  font-weight: 500;
+}
+.progressBar {
+  background-color: #b5b5b5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.progressBarFill {
+  background-color: cornflowerblue;
+  height: 100%;
+  width: 0;
+  transform: width 0.3s ease;
+}
